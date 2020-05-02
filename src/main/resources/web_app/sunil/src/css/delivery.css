@@ -1,0 +1,17 @@
+.delivery {
+  height: 20vh;
+  width: 100%;
+  background-color: rgb(37, 16, 11);
+}
+.delivery img {
+  height: 20vh;
+}
+
+@media screen and (max-width: 760px) {
+  .delivery img {
+    height: 15vh;
+  }
+  .delivery {
+    height: 15vh;
+  }
+}

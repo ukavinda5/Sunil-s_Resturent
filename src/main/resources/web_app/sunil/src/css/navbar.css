@@ -1,0 +1,121 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  background-color: #000000;
+  flex-direction: row;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav h4 {
+  left: 0px;
+}
+.cartlogo {
+  left: 0px;
+  background-image: url("../image/cart.png");
+  height: 5vh;
+  width: 5vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  padding: 5px;
+}
+.cartlogo:hover {
+  background-color: rgba(255, 242, 127, 0.466);
+}
+.logo {
+  /* background-color: rgba(0, 255, 255, 0.315); */
+  height: 8vh;
+  width: 10vh;
+  background-image: url("../image/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  height: 10vh;
+  align-items: center;
+  padding-top: 10px;
+}
+.nav-item1 {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  height: 10vh;
+  align-items: center;
+  padding-top: 10px;
+  background-color: rgba(220, 20, 60, 0.692);
+}
+
+.nav-item:hover {
+  background-color: #eeb64d;
+  color: black;
+}
+.nav-item1:hover {
+  background-color: #c50000;
+  color: black;
+}
+
+.logo {
+  color: wheat;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-links a {
+  color: wheat;
+  text-decoration: none;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.hburger {
+  display: none;
+}
+.hburger div {
+  width: 25px;
+  height: 2px;
+  background-color: aliceblue;
+  margin: 5px;
+}
+@media screen and (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    transition: transform 0.5s ease-in;
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 7vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    transform: translateX(100%);
+    z-index: 1000;
+  }
+  .hburger {
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}

@@ -1,0 +1,35 @@
+.welcome {
+  background-color: aqua;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url("../image/about.jpg");
+}
+
+.welcome .image {
+  flex: 1;
+  background-size: contain;
+  background-image: url("../image/about.jpg");
+}
+
+.welcome .overlay {
+  flex: 1;
+  background-color: #000000cb;
+}
+
+.welcome-text {
+  width: 90%;
+  height: 90%;
+  margin: auto auto;
+  color: rgba(255, 255, 255, 0.61);
+  padding-top: 50px;
+}
+.flaticon-pizza {
+  color: #cfa50d;
+}
+@media screen and (max-width: 760px) {
+  .welcome .image {
+    display: none;
+  }
+}
