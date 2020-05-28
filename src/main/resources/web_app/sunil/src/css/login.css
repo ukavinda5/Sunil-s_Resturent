@@ -23,6 +23,7 @@
   background-color: #eeb64d;
   color: black;
   border-radius: 30px;
+  outline: none;
   border-style: solid;
 }
 .login_con button:hover {

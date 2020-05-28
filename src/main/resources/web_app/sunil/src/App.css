@@ -9,6 +9,7 @@
 @import "./css/cart.css";
 @import "./css/menu.css";
 @import "./css/order.css";
+@import "./css/admin.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 * {
@@ -16,6 +17,9 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+label{
+    margin-bottom:0px;
 }
 .App {
   text-align: center;

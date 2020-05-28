@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import logo from "../image/logo.png";
 
 class Navbar extends Component {
@@ -31,41 +32,41 @@ class Navbar extends Component {
 
           <ul className="nav-links">
             <li>
-              <a href="/index">
+              <Link to="/">
                 <div className="nav-item">Home</div>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="/menu">
+              <Link to="/menu">
                 <div className="nav-item">Menu</div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/Orders">
+              <Link to="/Orders">
                 <div className="nav-item">Orders</div>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#">
+              <Link to="#">
                 <div className="nav-item">About</div>
-              </a>
+              </Link>
             </li>
 
             {!this.state.logged ? (
               <li>
-                <a href="/login">
+                <Link to="/login">
                   <div className="nav-item1 ">Login</div>
-                </a>
+                </Link>
               </li>
             ) : (
               ""
             )}
           </ul>
-          <a href="/cart">
+          <Link to="/cart">
             <div className="cartlogo"></div>
-          </a>
+          </Link>
           <div className="hburger" onClick={this.navslide}>
             <div className="line1"></div>
             <div className="line2"></div>

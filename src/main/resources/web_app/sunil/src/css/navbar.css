@@ -56,6 +56,10 @@ nav h4 {
   background-color: #eeb64d;
   color: black;
 }
+/* .nav-item:checked {
+  background-color: #eeb64d;
+  color: black;
+} */
 .nav-item1:hover {
   background-color: #c50000;
   color: black;

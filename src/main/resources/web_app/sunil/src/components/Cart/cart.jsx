@@ -1,6 +1,32 @@
 import React, { Component } from "react";
+import axios from "axios";
 import image from "../../image/image_1.jpg";
 class Cart extends Component {
+
+  constructor(props){
+    super(props)
+    this.state={
+      CartItems : []
+    }
+  }
+
+
+
+  componentDidMount() {
+
+    axios
+      .get("http://localhost:8081/getCartItems?userId="+2)
+      .then((a) => {
+        this.setState({ CartItems: a.data });
+        console.log(this.state);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+
+
   render() {
     return (
       <div className="cart">
@@ -14,18 +40,25 @@ class Cart extends Component {
         </div>
         <div className="cart_content">
           <div className="cart_items">
-            <div className="cart_item">
+            
+          {this.state.CartItems.map((item)=>{
+            
+              return(
+                
+
+                <div className="cart_item">
+            
               <div className="cart_item_img">
                 <img src={image}></img>
               </div>
               <div className="cart_item_nam">
-                <label>Vegetable Noodles</label>
+                <label>{item.id}</label>
               </div>
               <div className="cart_item_qty">
                 <div id="-">
                   <i class="fas fa-minus-circle fa-2x"></i>
                 </div>
-                <label>2</label>
+                <label>{item.qty}</label>
                 <div id="+">
                   <i class="fas fa-plus-circle fa-2x"></i>
                 </div>
@@ -37,11 +70,19 @@ class Cart extends Component {
                 <i class="far fa-trash-alt fa-2x"></i>
               </div>
             </div>
-          </div>
+              );
+          })
+            }
+            
+            
+
+           
+          
           <div className="cart_checkout">
             <div className="checkout shadow "></div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

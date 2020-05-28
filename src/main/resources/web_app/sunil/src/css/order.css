@@ -4,3 +4,27 @@
   width: 100vw;
   height: 100vh;
 }
+.orderc {
+  width: 100vw;
+  height: 90vh;
+  /* background-color: rgba(0, 0, 255, 0.39); */
+  padding: 0px 200px;
+}
+.order_table {
+  color: aliceblue;
+  border-bottom: solid 1px white;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(127, 255, 212, 0.301); */
+}
+.order_table td {
+  border-bottom: solid 1px white;
+}
+.order_table th {
+  border-bottom: solid 2px white;
+}
+@media screen and (max-width: 760px) {
+  .orderc {
+    padding: 0px 20px;
+  }
+}

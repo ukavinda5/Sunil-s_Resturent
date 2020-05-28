@@ -5,6 +5,7 @@
   background-size: cover;
   height: auto;
   width: 98.9vw;
+  overflow-x: hidden;
 }
 
 .head {
@@ -22,9 +23,22 @@
 }
 
 .search {
+  padding-left: 10px;
+
+  color: aliceblue;
+  font-size: 36;
+  font-weight: 500;
+  outline: none;
+  border: none;
   height: 8vh;
   width: 40vw;
   background-color: rgb(58, 54, 54);
+}
+.search:hover {
+  outline: solid 1px #eeb64d;
+}
+.search:focus {
+  outline: solid 1px #eeb64d;
 }
 .searchBtn {
   text-decoration: none;
